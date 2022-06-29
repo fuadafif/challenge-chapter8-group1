@@ -1,0 +1,433 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Binar Academy - Challenge Chapter 8",
+    "version": "1.0.0",
+    "contact": {}
+  },
+  "servers": [
+    {
+      "url": "http://localhost"
+    }
+  ],
+  "paths": {
+    "/api/": {
+      "get": {
+        "summary": "Get API",
+        "description": "Get API",
+        "operationId": "getApi",
+        "responses": {
+          "200": {
+            "description": "200 - Response Success",
+            "headers": {
+              "Access-Control-Allow-Origin": {
+                "schema": {
+                  "type": "string",
+                  "example": "*"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string",
+                  "example": "keep-alive"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "string",
+                  "example": "4"
+                }
+              },
+              "Date": {
+                "schema": {
+                  "type": "string",
+                  "example": "Wed, 29 Jun 2022 11:46:05 GMT"
+                }
+              },
+              "ETag": {
+                "schema": {
+                  "type": "string",
+                  "example": "W/\"4-qUqP5cyxm6YcTAhz05Hph5gvu9M\""
+                }
+              },
+              "Keep-Alive": {
+                "schema": {
+                  "type": "string",
+                  "example": "timeout=5"
+                }
+              },
+              "X-Powered-By": {
+                "schema": {
+                  "type": "string",
+                  "example": "Express"
+                }
+              }
+            },
+            "content": {
+              "text/plain": {
+                "examples": {
+                  "200 - Response Success": {
+                    "value": "test"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/": {
+      "get": {
+        "summary": "Get API V1",
+        "description": "Get API V1",
+        "operationId": "getApiV1",
+        "responses": {
+          "200": {
+            "description": "200 - Response Success",
+            "headers": {
+              "Access-Control-Allow-Origin": {
+                "schema": {
+                  "type": "string",
+                  "example": "*"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string",
+                  "example": "keep-alive"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "string",
+                  "example": "7"
+                }
+              },
+              "Date": {
+                "schema": {
+                  "type": "string",
+                  "example": "Wed, 29 Jun 2022 12:24:01 GMT"
+                }
+              },
+              "ETag": {
+                "schema": {
+                  "type": "string",
+                  "example": "W/\"7-WwVyZcBukETjNg/zcZd3hpaKOoU\""
+                }
+              },
+              "Keep-Alive": {
+                "schema": {
+                  "type": "string",
+                  "example": "timeout=5"
+                }
+              },
+              "X-Powered-By": {
+                "schema": {
+                  "type": "string",
+                  "example": "Express"
+                }
+              }
+            },
+            "content": {
+              "text/plain": {
+                "examples": {
+                  "200 - Response Success": {
+                    "value": "from v1"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/players/": {
+      "get": {
+        "summary": "Get All Players",
+        "description": "Get All Players",
+        "operationId": "getAllPlayers",
+        "responses": {
+          "200": {
+            "description": "200 - Response Success",
+            "headers": {
+              "Access-Control-Allow-Origin": {
+                "schema": {
+                  "type": "string",
+                  "example": "*"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string",
+                  "example": "keep-alive"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "string",
+                  "example": "30"
+                }
+              },
+              "Date": {
+                "schema": {
+                  "type": "string",
+                  "example": "Wed, 29 Jun 2022 12:37:48 GMT"
+                }
+              },
+              "ETag": {
+                "schema": {
+                  "type": "string",
+                  "example": "W/\"1e-5/MqRbLHOw2uS0C2leJW2NfasAg\""
+                }
+              },
+              "Keep-Alive": {
+                "schema": {
+                  "type": "string",
+                  "example": "timeout=5"
+                }
+              },
+              "X-Powered-By": {
+                "schema": {
+                  "type": "string",
+                  "example": "Express"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {},
+                      "example": []
+                    },
+                    "result": {
+                      "type": "string",
+                      "example": "Success"
+                    }
+                  }
+                },
+                "examples": {
+                  "200 - Response Success": {
+                    "value": {
+                      "data": [],
+                      "result": "Success"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a Player",
+        "description": "Create a Player",
+        "operationId": "createAPlayer",
+        "responses": {
+          "200": {
+            "description": ""
+          },
+          "400": {
+            "description": "400 - Bad Request",
+            "headers": {
+              "Access-Control-Allow-Origin": {
+                "schema": {
+                  "type": "string",
+                  "example": "*"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string",
+                  "example": "keep-alive"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "string",
+                  "example": "62"
+                }
+              },
+              "Date": {
+                "schema": {
+                  "type": "string",
+                  "example": "Wed, 29 Jun 2022 12:38:51 GMT"
+                }
+              },
+              "ETag": {
+                "schema": {
+                  "type": "string",
+                  "example": "W/\"3e-xFTrp1qqvBEsH8ipn3pPOaXdCsM\""
+                }
+              },
+              "Keep-Alive": {
+                "schema": {
+                  "type": "string",
+                  "example": "timeout=5"
+                }
+              },
+              "X-Powered-By": {
+                "schema": {
+                  "type": "string",
+                  "example": "Express"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string",
+                      "example": "username or email cannot empty"
+                    },
+                    "result": {
+                      "type": "string",
+                      "example": "Failed"
+                    }
+                  }
+                },
+                "examples": {
+                  "400 - Bad Request": {
+                    "value": {
+                      "message": "username or email cannot empty",
+                      "result": "Failed"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/players/{id}/": {
+      "get": {
+        "summary": "Get Player by Uers ID",
+        "description": "Get Player by Uers ID",
+        "operationId": "getPlayerByUersId",
+        "responses": {
+          "200": {
+            "description": "200 - Response Success",
+            "headers": {
+              "Access-Control-Allow-Origin": {
+                "schema": {
+                  "type": "string",
+                  "example": "*"
+                }
+              },
+              "Connection": {
+                "schema": {
+                  "type": "string",
+                  "example": "keep-alive"
+                }
+              },
+              "Content-Length": {
+                "schema": {
+                  "type": "string",
+                  "example": "30"
+                }
+              },
+              "Date": {
+                "schema": {
+                  "type": "string",
+                  "example": "Wed, 29 Jun 2022 12:51:56 GMT"
+                }
+              },
+              "ETag": {
+                "schema": {
+                  "type": "string",
+                  "example": "W/\"1e-5/MqRbLHOw2uS0C2leJW2NfasAg\""
+                }
+              },
+              "Keep-Alive": {
+                "schema": {
+                  "type": "string",
+                  "example": "timeout=5"
+                }
+              },
+              "X-Powered-By": {
+                "schema": {
+                  "type": "string",
+                  "example": "Express"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {},
+                      "example": []
+                    },
+                    "result": {
+                      "type": "string",
+                      "example": "Success"
+                    }
+                  }
+                },
+                "examples": {
+                  "200 - Response Success": {
+                    "value": {
+                      "data": [],
+                      "result": "Success"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "Update Player",
+        "description": "Update Player",
+        "operationId": "updatePlayer",
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      },
+      "post": {
+        "summary": "Update Player Experince",
+        "description": "Update Player Experince",
+        "operationId": "updatePlayerExperince",
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete Player",
+        "description": "Delete Player",
+        "operationId": "deletePlayer",
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      },
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "example": ""
+          }
+        }
+      ]
+    }
+  },
+  "tags": []
+}
